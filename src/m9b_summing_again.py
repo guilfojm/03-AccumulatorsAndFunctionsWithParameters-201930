@@ -90,13 +90,13 @@ def run_test_sum_powers_in_range():
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 0
-    answer = 0
+    expected = 1239
+    answer = sum_powers_in_range(2, 15, 2)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 0
-    answer = 0
+    expected = 13.825832
+    answer = sum_powers_in_range(3, 10, .3)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -120,8 +120,8 @@ def sum_powers_in_range(m, n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # -------------------------------------------------------------------------
     total = 0
-    for k in range(n-2):
-        total = total + ((m + k) ** p)
+    for k in range(m, n + 1):
+        total = total + ((k) ** p)
 
     return total
 
